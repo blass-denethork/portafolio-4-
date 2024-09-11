@@ -1,0 +1,165 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border box;
+    text-decoration: none;
+    font-family: "Poppins", system-ui;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", system-ui;
+}
+
+img{
+    max-width: 100%;
+}
+
+:root {
+    /*colores interfaz*/
+    --primario:#22B8C3;
+    --secundario:#FFC800;
+    --oscuro:#006066;
+    --medio-oscuro:#266E73;
+    --medio: #4DACB2;
+    --claro:#A6D6D9;
+    --color-fondo:#E5F9FA;
+    --blanquesino:#F5FEFE;
+    --blanco:#FFFFFF;
+
+}
+
+
+
+/*agregamos los estilos de celular*/
+
+.main {
+    overflow: hidden;
+    padding: 24px;
+} 
+
+.usuario{
+    background-color:var(--fondo);
+    padding: 20px;
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+
+    img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 50px;
+    }
+
+    .datos{
+
+        .display__flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .datos__nombre{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h1 {
+                font-size: 24px;
+                text-align:center;
+                color: var(--medio-oscuro);
+            }
+
+            a:hover{
+                color:var(--primario);
+            }
+
+            p{
+                font-size: 16px;
+                text-align: center;
+                color: var(--medio-oscuro);
+            }
+        }
+
+        .datos__icons{
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+
+            a{
+                font-size: 24px;
+                line-height: 24px;
+                color: var(--medio-oscuro);
+            }
+        }
+        .datos__cv{
+            .display: flex;
+            justify-content: center;
+            a{
+               background-color: var(--primario);
+               padding: 8px 16px;
+               border-radius: 8px;
+               color: var(--blanco); 
+               font-weight: 500;
+
+               a:hover {
+                    color:
+                    background--color: var(--secundario);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(min--width: 1024px){
+    .main{
+        padding: 64px;
+    }
+
+    .banner{
+        background-color: red;
+        display: flex;
+        align-items: center;
+    }
+
+    .usuario{
+        flex-direction: row;
+        background-color: inherit;
+        img{
+            width: 180px;
+            height: 180px;
+        }
+
+        .datos{
+
+            .datos__nombre{
+
+                h1{
+                    text-align: left;
+                    font-size: 32px;
+                }
+                
+                p{
+                    text-align: left;
+                    font-size: 20px;
+                }
+            }
+            .datos__icons{
+                justify-content: flex-start;
+
+                a{
+                    font-size: 16px;
+                }
+            }
+
+            .datos__cv{
+                justify-content: flex-start;
+            }
+        }
+    }
+
+}
